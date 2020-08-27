@@ -6,6 +6,38 @@ body {
 
 }
 
+.wrap-index{
+    box-sizing: inherit;
+    background: rgb(116, 148, 221);
+    background: linear-gradient(42deg, rgba(116, 148, 221, 1) 30%, rgba(200, 96, 133, 1) 90%);
+    height: 100vh;
+}
+
+.index-items{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 60vh;
+}
+
+.index-items>li>a{
+    text-decoration: none;
+    padding: 2em 3em;
+    text-align: center;
+    background-color: #3D4751;
+    color: white;
+    margin-left: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.index-items>li>a:hover{
+    background-color: black;
+}
+
+
+
 /*Desafio 1*/
 .wrap-1 {
     box-sizing: inherit;
@@ -37,7 +69,7 @@ body {
 
 .menu li > a {
     text-decoration: none;
-    color: white;
+    color: gray;
 }
 
 .menu li:nth-child(2) {
