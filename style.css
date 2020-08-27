@@ -1,0 +1,43 @@
+/*Index*/
+/*Desafio 1*/
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    border: 1px solid black;
+    height: 100px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.logo > img {
+    width: 60px;
+
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.menu li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:nth-child(2) {
+    margin: 0 60px;
+
+
+}
+
+.menu li > a:hover {
+    color: #FF6B6C;
+}
+
+/*Desafio 2*/
+/*Desafio 3*/
