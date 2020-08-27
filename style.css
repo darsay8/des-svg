@@ -1,19 +1,30 @@
 /*Index*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 /*Desafio 1*/
+.wrap-1 {
+    box-sizing: inherit;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 70%;
     border: 1px solid black;
-    height: 100px;
-    padding: 0 30px;
+    height: 6.25em;
+    padding: 0 1.875rem;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .logo > img {
-    width: 60px;
-
+    width: 3.75em;
 }
 
 .menu ul {
@@ -30,14 +41,254 @@
 }
 
 .menu li:nth-child(2) {
-    margin: 0 60px;
-
-
+    margin: 0 3.75rem;
 }
 
 .menu li > a:hover {
     color: #FF6B6C;
 }
 
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px) {
+    .nav-container {
+        width: 100%;
+    }
+
+    .menu li:nth-child(2) {
+        margin: 0 1.25rem;
+    }
+
+}
+
+@media only screen and(min-device-width: 1200px) {
+    .nav-container {
+        max-width: 75em;
+    }
+}
+
 /*Desafio 2*/
+
+.wrap-2 {
+    box-sizing: inherit;
+    background: rgb(116, 148, 221);
+    background: linear-gradient(42deg, rgba(116, 148, 221, 1) 30%, rgba(200, 96, 133, 1) 90%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.btn {
+    background: #3D4751;
+    color: white;
+    padding: 2em 6em;
+    border: none;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    -webkit-box-shadow: -5px 5px 7px -4px rgba(28, 28, 28, 1);
+    -moz-box-shadow: -5px 5px 7px -4px rgba(28, 28, 28, 1);
+    box-shadow: -5px 5px 7px -4px rgba(28, 28, 28, 1);
+    border: 1px solid white;
+    background: none;
+    margin-left: 10px;
+
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px) {
+
+    .btn {
+        font-size: 1em;
+    }
+
+}
+
+
 /*Desafio 3*/
+
+.wrap-2 {
+    box-sizing: inherit;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+.header {
+}
+
+.header-bg-1 {
+    background-color: #79C0E3;
+    display: flex;
+    flex-flow: column;
+    align-items: self-start;
+    padding: 0 10%;
+    height: 500px;
+
+
+}
+
+.img img {
+    padding-top: 20px;
+    width: 136px;
+    animation: op 1s ease-in-out 0s;
+}
+
+.text {
+    font-family: sans-serif;
+    color: white;
+    animation: op 1s ease-in-out 0s;
+}
+
+.text h1 {
+    font-size: 3em;
+    margin: 20px 0 10px;
+}
+
+.text p {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.header-bg-2 {
+    background-color: #F0ECDB;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    align-content: center;
+    flex-flow: column wrap;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+}
+
+@keyframes ltor {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: 0;
+    }
+
+}
+
+@keyframes rtol {
+    0% {
+        display: none;
+        right: -200px;
+    }
+    100% {
+        right: 200px;
+        display: block;
+    }
+
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+.item-left img {
+    position: relative;
+    bottom: 50px;
+    animation: ltor 1s ease-in-out 0s;
+}
+
+.item-center img {
+    position: relative;
+    bottom: 120px;
+    animation: op 1s ease-in-out 0s;
+}
+
+.item-right .people {
+    align-self: end;
+    width: 300px;
+    height: 150px;
+
+}
+
+.item-right .ball {
+    width: 52px;
+    position: fixed;
+    animation: rtol 1s ease-in-out 0s;
+    right: 200px;
+    top: 530px;
+
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 768px) {
+
+    .item-right .people {
+        position: relative;
+        right: 150px;
+        width: 100px;
+    }
+
+    @keyframes rtol {
+        0% {
+            right: -200px;
+        }
+        100% {
+            right: 50px;
+        }
+
+    }
+
+    .item-right .ball {
+        width: 52px;
+        position: fixed;
+        animation: rtol 1s ease-in-out 0s;
+        right: 50px;
+        top: 530px;
+    }
+
+}
+
+@media only screen
+and (min-device-width: 768px) {
+    @keyframes rtol {
+        0% {
+            right: -200px;
+        }
+        100% {
+            right: 5%;
+        }
+
+    }
+
+    .item-right .ball {
+        width: 52px;
+        position: fixed;
+        animation: rtol 1s ease-in-out 0s;
+        right: 5%;
+        top: 530px;
+    }
+
+}
+
+
+
